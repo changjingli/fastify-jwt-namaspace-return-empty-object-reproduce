@@ -8,6 +8,10 @@ module.exports = async function (fastify, opts) {
   // Place here your custom code!
   fastify.register(jwt, {
     secret: 'test',
+  })
+
+  fastify.register(jwt, {
+    secret: 'test',
     namespace: 'security',
     jwtVerify: 'securityVerify',
     jwtSign: 'securitySign'
